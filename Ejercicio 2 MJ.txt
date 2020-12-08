@@ -1,0 +1,18 @@
+Algoritmo revertir_string
+	
+	string1 = ""
+	string2 = ""
+	letra = 0
+	
+	Escribir "Escriba una frase: "
+	Leer string1
+	
+	cantidad = Longitud(string1)
+	Para i=1 Hasta cantidad Con Paso 1
+		string2 = string2 + SubCadena(string1, cantidad-letra, cantidad-letra)
+		letra = letra+1
+	FinPara
+	
+	Escribir string2
+	
+FinAlgoritmo
