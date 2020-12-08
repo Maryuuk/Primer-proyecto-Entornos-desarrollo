@@ -1,0 +1,48 @@
+Algoritmo jueggo
+	jugador = 0 
+	cambio = true
+	Para a <- 1 Hasta 100 Con Paso 1 Hacer
+		Si cambio=true Entonces
+			jugador=jugador+1
+		SiNo
+			jugador=jugador-1
+		Fin Si
+        Escribir "Jugador:" jugador," ",a;
+        num=a
+        Si jugador>=11 Entonces
+            jugador=jugador -1
+		Fin Si
+        
+		Si cambio=true Entonces
+			Si jugador >= 10 Y jugador >= 0 Entonces
+				jugador = jugador - 10;
+			Fin Si
+		SiNo
+			Si jugador >= 10 Y jugador >= 0 Entonces
+				jugador = jugador + 10;
+			Fin Si
+		Fin Si
+		
+        Si (num) MOD (7)=0 Entonces
+            cambio=NO cambio
+            Escribir "Cambio de sentido!!!";
+        SiNo
+			
+        Fin Si
+        Si (num) MOD (11)=0 Entonces
+            Si cambio=true Entonces
+				jugador=jugador+1
+			SiNo
+				jugador=jugador-1
+			Fin Si
+            Escribir "Salto al siguiente jugador!!!";
+        SiNo
+			
+        Fin Si
+        Si num = 100 Entonces
+            Escribir "Ha ganado el jugador: " contador;
+        SiNo
+			
+        Fin Si
+	Fin Para
+FinAlgoritmo

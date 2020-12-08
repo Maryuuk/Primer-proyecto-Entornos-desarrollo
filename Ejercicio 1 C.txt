@@ -1,0 +1,30 @@
+Algoritmo ecuacion_cuadratica
+    Escribir "introduce los valores para la ecuacion ax^2 + bx + c = 0"
+    Escribir "Introduce a"
+    Leer a
+    Escribir "Introduce b"
+    Leer b
+    Escribir "Introcuce c"
+    Leer c
+    
+    x = b^2 - 4 * a * c
+    
+    Si x < 0 Entonces
+        Escribir 'La ecuaci�n no se puede resolver'
+    Fin Si
+    Si x == 0 Entonces
+        xa = -b / 2 * a
+        Escribir 'La soluci�n es'
+        Escribir xa
+    SiNo
+        x1 = (-b - rc(x)) / 2 * a
+        
+        x2 = (-b + rc(x)) / 2 * a
+        
+        Escribir 'Las dos soluciones son:'
+        
+        Escribir x1
+        
+        Escribir x2
+    Fin Si
+FinAlgoritmo
