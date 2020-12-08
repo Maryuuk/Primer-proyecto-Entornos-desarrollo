@@ -1,0 +1,44 @@
+Algoritmo juego_amigos
+	
+	Definir num, jugador, divisible7, divisible11 Como Entero
+	num = 0
+	jugador = 1
+	divisible7 = 1
+	divisible11 = 0
+	
+	Mientras num <> 100 Hacer
+		num = num+1
+		Escribir "El jugador ", jugador, " dice el número ", num
+		
+		Si num MOD 7 = 0 Entonces
+			Si divisible7 = 1 Entonces
+				divisible7 = -1
+			SiNo
+				divisible7 = 1
+			Fin Si
+		Fin Si
+		
+		Si num MOD 11 = 0 Entonces
+			Si divisible7 = -1 Entonces
+				divisible11 = -1
+			SiNo
+				divisible11 = 1
+			Fin Si
+		Fin Si
+		
+		jugador = jugador+divisible7+divisible11
+		divisible11 = 0
+		
+		Si jugador = 0 Entonces
+			jugador = 10
+		SiNo
+			Si jugador = 11 Entonces
+				jugador = 1
+			Fin Si
+		Fin Si
+	Fin Mientras
+	
+	jugador = jugador-1
+	Escribir "El jugador ", jugador, " es el que dice el número ", num
+	
+FinAlgoritmo
